@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Day budget</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+    <div class="logo">
+        <span>money</span>
+        keeper
+    </div>
+    <div class="title">
+        Розрахунок денного бюджета
+    </div>
+    <div class="main">
+        <div class="data">
+            <div class="choose-budget-label">Введіть бюджет на 1 місяць</div>
+            <input class="choose-budget" type="text">
+
+            <div class="choose-budget-label">Введіть дату у форматі YYYY-MM-DD</div>
+            <input class="choose-date" type="text">
+
+            <div class="choose-expenses">Введіть обов'язкові витрати</div>
+            <input class="expenses-item" type="text" id="expenses_1" placeholder="Найменування">
+			<input class="expenses-item" type="text" id="expenses_2" placeholder="Ціна">
+			<input class="expenses-item" type="text" id="expenses_3" placeholder="Найменування">
+			<input class="expenses-item" type="text" id="expenses_4" placeholder="Ціна">
+            <button class="expenses-item-btn">Підтвердити</button>
+            
+            <div class="optionalexpenses">Введіть необов'язкові витрати</div>
+			<input class="optionalexpenses-item" type="text" id="optionalexpenses_1">
+			<input class="optionalexpenses-item" type="text" id="optionalexpenses_2">
+			<input class="optionalexpenses-item" type="text" id="optionalexpenses_3">
+            <button class="optionalexpenses-btn">Підтвердити</button>
+            
+            <div class="count-budget">Розрахунок денного бюджета</div>
+            <button class="count-budget-btn">Розрахувати</button>
+            
+            <div class="choose-income-label">Введіть статті можливого доходу через кому</div>
+            <input class="choose-income" type="text" id="income">
+            
+            <div class="checksavings">Чи є в вас депозит: 
+                <input id="savings" type="checkbox" checked/>
+            </div>
+            <label for="sum">Сума</label>
+			<input class="choose-sum" id="sum" type="text">
+			<label for="percent">Процент</label>
+            <input class="choose-percent" id="percent" type="text">
+            
+            <div class="open">
+                <button class="start" id="start">Почати розрахунок</button>
+            </div>
+        </div>
+        <div class="result">
+            <div class="result-table">
+                <div class="budget">Дохід: </div>
+                <div class="budget-value"></div>
+    
+                <div class="daybudget">Бюджет на 1 день: </div>
+                <div class="daybudget-value"></div>
+    
+                <div class="level">Рівень доходів: </div>
+                <div class="level-value"></div>
+    
+                <div class="expenses">Обов'язкові витрати: </div>
+                <div class="expenses-value"></div>
+    
+                <div class="optionalexpenses">Можливі витрати: </div>
+                <div class="optionalexpenses-value"></div>
+    
+                <div class="income">Додатковий дохід: </div>
+                <div class="income-value"></div>
+    
+                <div class="monthsavings">Накопичення за 1 місяць:</div>
+                <div class="monthsavings-value"></div>
+    
+                <div class="yearsavings">Накопичення за 1 рік:</div>
+                <div class="yearsavings-value"></div>
+            </div>
+            <div class="time-data">
+                <div class="year">
+                    Рік:
+                    <input class="year-value" type="text" readonly>
+                </div>
+                <div class="month">
+                    Місяць:
+                    <input class="month-value" type="text" readonly>
+                </div>
+                <div class="day">
+                    День:
+                    <input class="day-value" type="text" readonly>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
